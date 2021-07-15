@@ -1,3 +1,6 @@
+{% extends 'base.html' %}
+
+{% block content %}
 here is news
 {% for one_news in news %}
 
@@ -5,3 +8,4 @@ here is news
 <font color='yellow'>{{one_news.text}}</font>
 
 {% endfor %}
+{% endblock %}
