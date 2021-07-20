@@ -15,11 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from news.views import news, news_detail, news_new
+from news.views import news, news_detail, news_new, tag_detail_view
+from userinfo.views import new_user
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('news/', news, name='news'),
     path('news/<int:pk>/', news_detail, name='news_detail'),
+    path('news/tag/<int:pk>/', tag_detail_view, name='news_by_tag'),
     path('news/add/', news_new, name='news_add'),
+    path('', new_user, name='add_user'),
 ]

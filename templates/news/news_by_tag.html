@@ -2,11 +2,7 @@
 
 {% block content %}
 here is news
-<br>
-{% for one_tag in tag %}
-<a href={% url 'news_by_tag' pk=one_tag.pk %}>{{one_tag.name}}</a>
-{% endfor %}
-{% for one_news in news %}
+{% for one_news in news_by_tag %}
 
 <h1>{{one_news.title}}</h1>
 <font color='yellow'>{{one_news.text}}</font>
