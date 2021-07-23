@@ -1,0 +1,13 @@
+
+<h1>у нас вы можете приобрести</h1>
+<br>
+{% for product in products %}
+<h2>{{product.title}}</h2>
+<table>
+    <tr>
+        <td>Цена</td>
+        <td>{{product.price}}</td>
+    </tr>
+</table>
+{% endfor %}
+

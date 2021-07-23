@@ -1,0 +1,6 @@
+Add new tag
+
+<form method="POST">{% csrf_token %}
+    {{ tag_form.as_p }}
+    <button type="submit">Save</button>
+</form>
