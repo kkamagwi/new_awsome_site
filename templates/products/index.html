@@ -1,13 +1,17 @@
-
+{% extends "base.html" %}
+{% block content %}
+<center>
 <h1>у нас вы можете приобрести</h1>
-<br>
+
 {% for product in products %}
-<h2>{{product.title}}</h2>
-<table>
-    <tr>
-        <td>Цена</td>
-        <td>{{product.price}}</td>
-    </tr>
-</table>
+<div class="card text-dark bg-info mb-3" style="max-width: 18rem;">
+    <a href={% url 'products_detail' pk=product.pk%}><div class="card-header">Подробнее</div></a>
+    <div class="card-body">
+      <h5 class="card-title">{{product.title}}</h5>
+      <p class="card-text">{{product.body}}</p>
+    </div>
+
 {% endfor %}
+</center>
+{% endblock %}
 

@@ -1,5 +1,11 @@
-<h2>Купите срочно!!!!</h2>
-
-<h1>{{products_detail.title}}</h1>
-<font color='green'>{{products_detail.body}}</font>
-Звоните по номеру {{products_detail.phone_number}}!!!!!!
+{% extends 'base.html' %}
+{% block content %}
+<div class="card mb-3">
+    <img height=200 src="https://image.similarpng.com/very-thumbnail/2020/06/3D-podium-with-interior-lighting-on-transparent-background-PNG.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{products_detail.title}}</h5>
+      <p class="card-text">{{products_detail.body}}</p>
+      <p class="card-text"><small class="text-muted">{{products_detail.phone_number}}</small></p>
+    </div>
+  </div>
+{% endblock %}
